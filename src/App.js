@@ -78,4 +78,6 @@ function ThreeTwo(){
   return <h1>hello ThreeTwo</h1>
 }
 
+// 동기화 테스트를 위한 주석 잠시 추가 추후 삭제예정  
+
 export default App;
