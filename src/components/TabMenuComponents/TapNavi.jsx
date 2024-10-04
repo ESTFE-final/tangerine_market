@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// css 만 넣으면 되것으요 ~ 선생님 ~~~ 아이고 고생하셨어요 자비스 선상님
 
 // SVG 이미지 import
 import iconMain from '../../icons/icon-home.svg';
