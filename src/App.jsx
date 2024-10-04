@@ -20,12 +20,6 @@ import FollowerListPage from './pages/FollowerListPage';
 function App() {
 	return (
 		<BrowserRouter>
-			<Link to="/"> 메인(홈) </Link>
-			<Link to="/login"> 로그인 </Link>
-			<Link to="/signup"> 회원가입 </Link>
-			<Link to="/myprofile"> 내 프로필 </Link>
-			<Link to="/profile/user"> 유저 프로필 </Link>
-
 			<Routes>
 				<Route path="/" element={<MainPage />} />
 				<Route path="/login" element={<LoginEmailPage />} />
