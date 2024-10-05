@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import axios from 'axios';
+import MainEmptyFeed from '../components/MainComponents/MainEmptyFeed';
 
-const PostListPage = () => (
-	<div>
-		<h1>피드 디테일 페이지입니다</h1>
-	</div>
-);
+const PostListPage = () => {
+	return (
+		<>
+			<MainEmptyFeed />
+		</>
+	);
+};
 
 export default PostListPage;

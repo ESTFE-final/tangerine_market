@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Product1 from '../../icons/img-main-category(1).png';
 import Product2 from '../../icons/img-main-category(2).png';
+import Cart from '../../icons/icon-main-shopping-cart.svg';
 
 const Container = styled.div`
 	width: 90%;
@@ -44,6 +45,7 @@ const ProductWrapper = styled.div`
 	flex-direction: column;
 	padding: 10px;
 	border-radius: 8px;
+	position: relative;
 `;
 
 const ProductImage = styled.img`
@@ -61,8 +63,17 @@ const ProductPrice = styled.p`
 	font-weight: bold;
 `;
 
+const ShoppingCart = styled.img`
+	position: absolute;
+	right: 25px;
+	bottom: 110px;
+	width: 72px;
+	height: 72px;
+	cursor: pointer;
+`;
+
 const MainProductList = () => {
-	const [selected, setselected] = useState('인기순');
+	const [selected, setSelected] = useState('인기순');
 	const products = [
 		{ img: Product1, name: '고구마 야채 연어 사료 200g', price: '35,000원' },
 		{ img: Product2, name: '필드게인 양고기 1kg/3kg/5kg', price: '35,000원' },
@@ -89,7 +100,7 @@ const MainProductList = () => {
 					<Button
 						key={option}
 						isSelected={selected === option}
-						onClick={() => setselected(option)}
+						onClick={() => setSelected(option)}
 					>
 						{option}
 					</Button>
@@ -100,6 +111,7 @@ const MainProductList = () => {
 				{products.map((product, index) => (
 					<ProductWrapper key={index}>
 						<ProductImage src={product.img} alt={product.name} />
+						<ShoppingCart src={Cart} />
 						<ProductName>{product.name}</ProductName>
 						<ProductPrice>{product.price}</ProductPrice>
 					</ProductWrapper>
