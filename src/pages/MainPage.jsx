@@ -5,6 +5,7 @@ import {
 	NavigationBar,
 } from '../components/SharedComponents/CommonComponents';
 import MainBanner from '../components/MainComponents/MainBanner';
+import MainCategory from '../components/MainComponents/MainCategory';
 
 const BodyContainer = styled.div`
 	width: 100vw;
@@ -25,6 +26,7 @@ const MainPage = () => (
 			<ListContainer>
 				<NavigationBar title={'핸드펫 홈'} />
 				<MainBanner />
+				<MainCategory />
 			</ListContainer>
 		</BodyContainer>
 	</>

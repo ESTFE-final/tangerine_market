@@ -28,7 +28,7 @@ const SlideButton = styled.button`
 	position: absolute;
 	bottom: 16px;
 	right: 16px;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: #000000b2;
 	color: white;
 	padding: 8px 16px;
 	border-radius: 30px;

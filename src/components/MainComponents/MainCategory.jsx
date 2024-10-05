@@ -1,7 +1,78 @@
 import styled from 'styled-components';
 import React from 'react';
+import PetFood from '../../icons/icon-main-pet-food.svg';
+import PetJerky from '../../icons/icon-main-pet-jerky.svg';
+import PetChew from '../../icons/icon-main-pet-chew.svg';
+import PetCookie from '../../icons/icon-main-pet-cookie.svg';
+import PetCake from '../../icons/icon-main-pet-cake.svg';
+import PetPowder from '../../icons/icon-main-pet-powder.svg';
+import Sale from '../../icons/icon-main-sale.svg';
+
+const CategoryContainer = styled.div`
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 20px;
+	width: 631px;
+	height: 308px;
+	margin: 26px auto;
+`;
+
+const CategoryWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`;
+
+const IconContainer = styled.div`
+	width: 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f5f5f5;
+	border-radius: 12px;
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	}
+	cursor: pointer;
+`;
+
+const Icon = styled.img`
+	width: 60px;
+	height: 60px;
+`;
+
+const Label = styled.span`
+	margin-top: 10px;
+	font-size: 14px;
+	color: #333;
+`;
+
+const categories = [
+	{ icon: PetFood, label: '수제사료' },
+	{ icon: PetJerky, label: '육포·말이' },
+	{ icon: PetChew, label: '천연수제껌' },
+	{ icon: PetCookie, label: '쿠키' },
+	{ icon: PetCake, label: '케이크' },
+	{ icon: PetPowder, label: '파우더' },
+	{ icon: Sale, label: '세일' },
+];
 
 const MainCategory = () => {
-	return <></>;
+	return (
+		<CategoryContainer>
+			{categories.map((category, index) => (
+				<CategoryWrapper key={index}>
+					<IconContainer>
+						<Icon src={category.icon} alt={category.label} />
+					</IconContainer>
+					<Label>{category.label}</Label>
+				</CategoryWrapper>
+			))}
+		</CategoryContainer>
+	);
 };
+
 export default MainCategory;
