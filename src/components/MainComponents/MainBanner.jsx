@@ -33,7 +33,7 @@ const SlideButton = styled.button`
 	padding: 8px 16px;
 	border-radius: 30px;
 	border: none;
-	font-size: 14px;
+	font-size: 1.5rem;
 	cursor: pointer;
 `;
 

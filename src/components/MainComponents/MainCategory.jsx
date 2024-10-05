@@ -46,8 +46,13 @@ const Icon = styled.img`
 
 const Label = styled.span`
 	margin-top: 10px;
-	font-size: 14px;
+	font-size: 2rem;
 	color: #333;
+`;
+
+const Divider = styled.div`
+	height: 42px;
+	background-color: #f5f5f5;
 `;
 
 const categories = [
@@ -62,16 +67,19 @@ const categories = [
 
 const MainCategory = () => {
 	return (
-		<CategoryContainer>
-			{categories.map((category, index) => (
-				<CategoryWrapper key={index}>
-					<IconContainer>
-						<Icon src={category.icon} alt={category.label} />
-					</IconContainer>
-					<Label>{category.label}</Label>
-				</CategoryWrapper>
-			))}
-		</CategoryContainer>
+		<>
+			<CategoryContainer>
+				{categories.map((category, index) => (
+					<CategoryWrapper key={index}>
+						<IconContainer>
+							<Icon src={category.icon} alt={category.label} />
+						</IconContainer>
+						<Label>{category.label}</Label>
+					</CategoryWrapper>
+				))}
+			</CategoryContainer>
+			<Divider />
+		</>
 	);
 };
 
