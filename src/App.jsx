@@ -16,6 +16,7 @@ import AddProductPage from './pages/AddProductPage';
 import PostUploadPage from './pages/PostUploadPage';
 import UserProfilePage from './pages/UserProfilePage';
 import FollowerListPage from './pages/FollowerListPage';
+import PostListPage from './pages/PostListPage';
 
 function App() {
 	return (
@@ -30,6 +31,7 @@ function App() {
 				<Route path="/postupload" element={<PostUploadPage />} />
 				<Route path="/addproduct" element={<AddProductPage />} />
 				<Route path="/follower" element={<FollowerListPage />} />
+				<Route path="/post" element={<PostListPage />} />
 			</Routes>
 		</BrowserRouter>
 	);

@@ -4,6 +4,7 @@ import { NavigationBar } from '../components/SharedComponents/CommonComponents';
 import MainBanner from '../components/MainComponents/MainBanner';
 import MainCategory from '../components/MainComponents/MainCategory';
 import MainProductList from '../components/MainComponents/MainProductList';
+import { Link } from 'react-router-dom';
 
 const BodyContainer = styled.div`
 	width: 100vw;
@@ -24,6 +25,7 @@ const MainPage = () => (
 				<MainBanner />
 				<MainCategory />
 				<MainProductList />
+				<Link to="/post">포스트 페이지 이동</Link>
 			</ListContainer>
 		</BodyContainer>
 	</>
