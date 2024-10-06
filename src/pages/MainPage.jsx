@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-	Input,
-	NavigationBar,
-} from '../components/SharedComponents/CommonComponents';
+import { NavigationBar } from '../components/SharedComponents/CommonComponents';
 import MainBanner from '../components/MainComponents/MainBanner';
 import MainCategory from '../components/MainComponents/MainCategory';
 import MainProductList from '../components/MainComponents/MainProductList';
