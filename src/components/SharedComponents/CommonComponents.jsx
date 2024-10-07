@@ -10,8 +10,8 @@ const NavBar = styled.nav`
 	padding: 0 16px;
 	display: flex;
 	align-items: center;
-	background-color: #fff;
-	border-bottom: 1px solid #dbdbdb;
+	background-color: var(--white);
+	border-bottom: 1px solid var(--gray);
 	box-sizing: border-box;
 	margin-bottom: 48px;
 `;
@@ -43,18 +43,18 @@ const NavRightButton = styled.div`
 const CommonInput = styled.input`
 	width: 100%;
 	padding: 1.063rem 1rem;
-	background-color: #fafafa;
-	border: 1px solid #f6f6f6;
+	background-color: var(--graylight);
+	border: 1px solid var(--graylight-100);
 	border-radius: 44px;
 	outline: none;
 
 	&::placeholder {
-		color: #dbdbdb;
+		color: var(--gray);
 	}
 
 	&:focus {
-		background-color: #fff;
-		border-color: #ff3239;
+		background-color: var(--white);
+		border-color: var(--primary);
 	}
 `;
 
@@ -80,16 +80,16 @@ const AlertButtonLeft = styled.button`
 	width: 126px;
 	background-color: transparent;
 	padding: 15px 0;
-	border-top: 0.5px solid #dbdbdb;
+	border-top: 0.5px solid var(--gray);
 `;
 
 const AlertButtonRight = styled.button`
 	width: 126px;
 	background-color: transparent;
 	padding: 15px 0;
-	border-top: 0.5px solid #dbdbdb;
-	border-left: 0.5px solid #dbdbdb;
-	color: #ff3239;
+	border-top: 0.5px solid var(--gray);
+	border-left: 0.5px solid var(--gray);
+	color: var(--primary);
 `;
 
 const PostModalContainer = styled.aside`
@@ -97,7 +97,7 @@ const PostModalContainer = styled.aside`
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background-color: #fff;
+	background-color: var(--white);
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 	border-radius: 10px 10px 0 0;
 	opacity: 0;
@@ -121,7 +121,7 @@ const PostModalContent = styled.div`
 const PostModalHandle = styled.button`
 	width: 50px;
 	height: 4px;
-	background-color: #dbdbdb;
+	background-color: var(--gray);
 	border-radius: 5px;
 	margin: 0 auto 12px;
 `;
@@ -266,15 +266,3 @@ export const PostModal = ({ isOpen, onClose, options = [] }) => {
 		</PostModalContainer>
 	);
 };
-
-export const WholeContainer = styled.div`
-	width: 100vw;
-	height: 100vh;
-`;
-export const BodyContainer = styled.div`
-	width: 780px;
-	margin: auto;
-	border: 1px solid black;
-	justify-content: center;
-	align-items: center;
-`;

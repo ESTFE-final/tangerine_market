@@ -3,22 +3,22 @@ import styled, { css } from 'styled-components';
 const SIZES = {
 	xs: css`
 		--button-font-size: 1.1rem;
-		--button-max-width: 70px;
+		--button-max-width: 140px;
 		--button-padding: 0.7rem 1.5rem 0.8rem;
 		--button-radius: 2.6rem;
 	`,
 	sm: css`
-		--button-max-width: 90px;
+		--button-max-width: 180px;
 		--button-padding: 0.9rem 3.1rem 0.7rem;
 		--button-radius: 3.2rem;
 	`,
 	md: css`
-		--button-max-width: 120px;
+		--button-max-width: 240px;
 		--button-padding: 1rem 4rem 0.8rem;
 		--button-radius: 3rem;
 	`,
 	lg: css`
-		--button-max-width: 322px;
+		--button-max-width: 644px;
 		--button-padding: 1.3rem 14rem 1.5rem;
 		--button-radius: 4.4rem;
 	`,
