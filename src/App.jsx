@@ -1,4 +1,4 @@
-import React from 'react';
+import './App.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 import MainPage from './pages/MainPage';
@@ -10,36 +10,29 @@ import AddProductPage from './pages/AddProductPage';
 import PostUploadPage from './pages/PostUploadPage';
 import UserProfilePage from './pages/UserProfilePage';
 import FollowerListPage from './pages/FollowerListPage';
+import PostListPage from './pages/PostListPage';
+import SearchPage from './pages/SearchPage';
 
 import TapNavi from './components/TabMenuComponents/TapNavi';
 
 function App() {
 	return (
 		<BrowserRouter>
-			<div>
-				<nav>
-					<Link to="/"> 메인(홈) </Link>
-					<Link to="/login"> 로그인 </Link>
-					<Link to="/signup"> 회원가입 </Link>
-					<Link to="/myprofile"> 내 프로필 </Link>
-					<Link to="/profile/user"> 유저 프로필 </Link>
-				</nav>
+			<Routes>
+				<Route path="/" element={<MainPage />} />
+				<Route path="/login" element={<LoginEmailPage />} />
+				<Route path="/signup" element={<SignUpPage />} />
+				<Route path="/myprofile" element={<MyProfilePage />} />
+				<Route path="/editprofile" element={<EditProfilePage />} />
+				<Route path="/profile/user" element={<UserProfilePage />} />
+				<Route path="/postupload" element={<PostUploadPage />} />
+				<Route path="/addproduct" element={<AddProductPage />} />
+				<Route path="/follower" element={<FollowerListPage />} />
+				<Route path="/post" element={<PostListPage />} />
+				<Route path="/search" element={<SearchPage />} />
+			</Routes>
 
-				<Routes>
-					<Route path="/" element={<MainPage />} />
-					<Route path="/login" element={<LoginEmailPage />} />
-					<Route path="/signup" element={<SignUpPage />} />
-					<Route path="/myprofile" element={<MyProfilePage />} />
-					<Route path="/editprofile" element={<EditProfilePage />} />
-					<Route path="/profile/user" element={<UserProfilePage />} />
-					<Route path="/postupload" element={<PostUploadPage />} />
-					<Route path="/addproduct" element={<AddProductPage />} />
-					<Route path="/follower" element={<FollowerListPage />} />
-				</Routes>
-
-				{/* TapNavi 컴포넌트를 하단에 추가 */}
-				<TapNavi />
-			</div>
+			<TapNavi />
 		</BrowserRouter>
 	);
 }

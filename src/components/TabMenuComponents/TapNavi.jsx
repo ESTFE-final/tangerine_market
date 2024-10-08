@@ -4,9 +4,9 @@ import './TapNavi.css';
 
 // SVG 이미지 import
 import iconMain from '../../icons/icon-home.svg';
-import iconAbout from '../../icons/icon-user.svg';
-import iconServices from '../../icons/icon-user.svg';
-import iconContact from '../../icons/icon-user.svg';
+import iconAbout from '../../icons/icon-message-circle.svg';
+import iconServices from '../../icons/icon_edit 2.svg';
+import iconContact from '../../icons/icon-edit.svg';
 import iconHelp from '../../icons/icon-user.svg';
 
 // 탭 정보를 담은 배열
