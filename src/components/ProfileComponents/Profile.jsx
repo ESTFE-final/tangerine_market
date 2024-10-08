@@ -5,6 +5,7 @@ import Button from '../SharedComponents/Button';
 import profileImage from '../../icons/profile-img.svg';
 import messageIcon from '../../icons/message-btn.svg';
 import shareIcon from '../../icons/share-btn.svg';
+import menuIcon from '../../icons/icon-more-vertical.svg';
 
 const dummyProfile = {
 	username: '애완 간식 수제샵',
@@ -16,40 +17,55 @@ const dummyProfile = {
 	followingCount: 128,
 };
 
-const ProfileMain = styled.article`
+const ProfileWrapper = styled.article`
 	background-color: var(--primary);
-	border-radius: 0 0 40px 40px;
-	padding: 48px 26px 27px 26px;
+	border-radius: 0 0 80px 80px;
 `;
 
-const ProfileNavBar = styled.div`
-	.common-nav {
-		background-color: #ff3239;
-	}
+const CustomProfileNavBar = styled(NavigationBar)`
+	background-color: var(--primary);
+	border: none;
+	padding: 32px;
 `;
 
-const ProfileInfo = styled.section`
+const ProfileMain = styled.section`
+	padding: 0 52px 54px 52px;
+`;
+
+const ProfileInfo = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 23px;
+	margin-bottom: 46px;
 	color: var(--white);
 `;
 
 const ProfileInfoText = styled.div`
 	display: flex;
 	align-items: center;
-	gap: 17px;
+	gap: 34px;
+`;
+
+const UserImage = styled.a`
+	width: 148px;
+	height: 148px;
+	border-radius: 50%;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 `;
 
 const ProfileName = styled.div`
 	.profile-username {
 		color: var(--white);
-		font-size: 2.5rem;
+		font-size: 2.8rem;
 	}
 
 	.profile-account {
-		font-size: 1.9rem;
+		font-size: 2rem;
 		color: var(--redlight);
 	}
 `;
@@ -57,36 +73,36 @@ const ProfileName = styled.div`
 const ProfileButtons = styled.div`
 	.message-btn,
 	.share-btn {
-		width: 60px;
-		height: 60px;
+		width: 68px;
+		height: 68px;
 		background-repeat: no-repeat;
 		background-position: center;
 	}
 
 	.message-btn {
 		background-image: url(${messageIcon});
-		background-size: 60px;
-		margin-right: 16px;
+		background-size: 68px;
+		margin-right: 32px;
 	}
 
 	.share-btn {
 		background-image: url(${shareIcon});
-		background-size: 60px;
+		background-size: 68px;
 	}
 `;
 
 const ProfileIntro = styled.p`
-	font-size: 2.3rem;
+	font-size: 2.6rem;
 	color: var(--white);
 `;
 
 const ProfileStats = styled.section`
 	display: flex;
 	justify-content: space-around;
-	padding: 24px 28px;
-	border-radius: 30px;
+	padding: 48px 56px;
+	border-radius: 60px;
 	background-color: rgba(255, 255, 255, 0.5);
-	margin-top: 28px;
+	margin-top: 56px;
 `;
 
 const ProfileFollow = styled.div`
@@ -95,7 +111,7 @@ const ProfileFollow = styled.div`
 	align-items: center;
 
 	.stat-value {
-		font-size: 2.3rem;
+		font-size: 3rem;
 		font-weight: bold;
 	}
 
@@ -121,51 +137,53 @@ const Profile = ({ profile = dummyProfile }) => {
 	};
 
 	return (
-		<ProfileMain>
-			<ProfileNavBar>
+		<ProfileWrapper>
+			<CustomProfileNavBar>
 				<NavigationBar rightButton={<MenuButton />} />
-			</ProfileNavBar>
+			</CustomProfileNavBar>
 
-			<ProfileInfo>
-				<ProfileInfoText>
-					<a href="#">
-						<img src={image} alt={`${username}의 프로필 이미지`} />
-					</a>
-					<ProfileName>
-						<h1 className="profile-username">{username}</h1>
-						<p className="profile-account">{accountname}</p>
-					</ProfileName>
-				</ProfileInfoText>
-				<ProfileButtons>
-					<button
-						type="button"
-						aria-label="채팅하기"
-						className="message-btn"
-					></button>
-					<button
-						type="button"
-						aria-label="공유하기"
-						className="share-btn"
-					></button>
-				</ProfileButtons>
-			</ProfileInfo>
-			<ProfileIntro>{intro}</ProfileIntro>
-			<ProfileStats>
-				<ProfileFollow>
-					<span className="stat-value">{followerCount}</span>
-					<span className="stat-label">팔로워</span>
-				</ProfileFollow>
-				<ProfileFollow>
-					<span className="stat-value">{followingCount}</span>
-					<span className="stat-label">팔로잉</span>
-				</ProfileFollow>
-				{!isfollow && (
-					<Button size="sm" className="follow-btn">
-						팔로우
-					</Button>
-				)}
-			</ProfileStats>
-		</ProfileMain>
+			<ProfileMain>
+				<ProfileInfo>
+					<ProfileInfoText>
+						<UserImage href="#">
+							<img src={image} alt={`${username}의 프로필 이미지`} />
+						</UserImage>
+						<ProfileName>
+							<h1 className="profile-username">{username}</h1>
+							<p className="profile-account">{accountname}</p>
+						</ProfileName>
+					</ProfileInfoText>
+					<ProfileButtons>
+						<button
+							type="button"
+							aria-label="채팅하기"
+							className="message-btn"
+						></button>
+						<button
+							type="button"
+							aria-label="공유하기"
+							className="share-btn"
+						></button>
+					</ProfileButtons>
+				</ProfileInfo>
+				<ProfileIntro>{intro}</ProfileIntro>
+				<ProfileStats>
+					<ProfileFollow>
+						<span className="stat-value">{followerCount}</span>
+						<span className="stat-label">팔로워</span>
+					</ProfileFollow>
+					<ProfileFollow>
+						<span className="stat-value">{followingCount}</span>
+						<span className="stat-label">팔로잉</span>
+					</ProfileFollow>
+					{!isfollow && (
+						<Button size="sm" className="follow-btn">
+							팔로우
+						</Button>
+					)}
+				</ProfileStats>
+			</ProfileMain>
+		</ProfileWrapper>
 	);
 };
 
