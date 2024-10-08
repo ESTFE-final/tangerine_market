@@ -1,0 +1,24 @@
+/* styles.css */
+.tap--navi {
+	display: flex;
+	justify-content: space-around;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #2222;
+	border: 1px solid #222222;
+}
+
+.tap--navi button {
+	background: none;
+	border: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tap--navi img {
+	width: 24px;
+	height: 24px;
+	margin-bottom: 5px;
+}

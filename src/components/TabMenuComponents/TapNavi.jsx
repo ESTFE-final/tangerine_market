@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './TapNavi.css';
 
 // SVG 이미지 import
 import iconMain from '../../icons/icon-home.svg';
 import iconAbout from '../../icons/icon-user.svg';
 import iconServices from '../../icons/icon-user.svg';
 import iconContact from '../../icons/icon-user.svg';
-import iconHelp from '../../icons/icon_edit 2.svg';
+import iconHelp from '../../icons/icon-user.svg';
 
 // 탭 정보를 담은 배열
 const tabs = [
@@ -19,7 +20,7 @@ const tabs = [
 
 function TapNavi() {
 	return (
-		<div className="tap-navi">
+		<div className="tap--navi">
 			{tabs.map((tab, index) => (
 				<Link key={index} to={tab.path}>
 					<button>
