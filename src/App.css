@@ -5,91 +5,103 @@
 ---------------------------------------------------------------- */
 
 @font-face {
-    font-family: 'GmarketSans';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+	font-family: 'GmarketSans';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff')
+		format('woff');
+	font-weight: bold;
+	font-style: normal;
 }
 
 @font-face {
-    font-family: 'GmarketSans';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'GmarketSans';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
-    min-width: 390px;
-    max-width: 780px;
-    -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
-    -ms-text-size-adjust: none;
+html,
+body {
+	width: 100%;
+	height: 100%;
+	min-width: 390px;
+	min-height: 100%;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
 }
 
-html{
-    font-size: 62.5%; /* 1rem = 10px */
+html {
+	font-size: 62.5%; /* 1rem = 10px */
 }
 @media only screen and (max-width: 1024px) {
-    html {
-        font-size: 55%;
-    }
+	html {
+		font-size: 55%;
+	}
 }
 @media only screen and (max-width: 640px) {
-    html {
-        font-size: 58%;
-    }
+	html {
+		font-size: 58%;
+	}
 }
 
 /* color*/
 :root {
-    --black: #222;
-    --white: #fff;
-    --redlight: #FFC1C4;
-    --primary: #FF3239;
-    --danger:#FF010A;
-    --graylight: #fafafa;
-    --graylight-100:#f6f6f6;
-    --gray: #dbdbdb;
-    --gray-100: #d1d1d1;
-    --gray-200: #c4c4c4;
-    --gray-300: #B4B4B4;
-    --graydark: #767676;
-    --graydark-100:#555;
-    --graydark-200:#515151;
+	--black: #222;
+	--white: #fff;
+	--redlight: #ffc1c4;
+	--primary: #ff3239;
+	--danger: #ff010a;
+	--graylight: #fafafa;
+	--graylight-100: #f6f6f6;
+	--gray: #dbdbdb;
+	--gray-100: #d1d1d1;
+	--gray-200: #c4c4c4;
+	--gray-300: #b4b4b4;
+	--graydark: #767676;
+	--graydark-100: #555;
+	--graydark-200: #515151;
 
-    --border-basis: 4.4rem;
-    --border-md: 3rem;
-    --border-sm: 3.2rem;
-    --border-xs: 2.6rem;
+	--border-basis: 4.4rem;
+	--border-md: 3rem;
+	--border-sm: 3.2rem;
+	--border-xs: 2.6rem;
 }
 
 body {
-    width: 100%;
-    min-height: 100%;
-    font-size: 1.6rem;
-    line-height: 1.4;
-    color: var(--black);
-    overflow-x: hidden;
-    -webkit-text-size-adjust: none;
-    padding: 0;
-    margin: 0;
-    font-family: 'GmarketSans', sans-serif;
+	width: 100%;
+	min-height: 100%;
+	font-size: 1.6rem;
+	line-height: 1.4;
+	color: var(--black);
+	overflow-x: hidden;
+	-webkit-text-size-adjust: none;
+	padding: 0;
+	margin: 0;
+	font-family: 'GmarketSans', sans-serif;
 }
 
-input, select, textarea{
-    color: var(--black);
-    font-size: 1.4rem;
+input,
+select,
+textarea {
+	color: var(--black);
+	font-size: 1.4rem;
 }
 
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+#root {
+	width: 100%;
+	min-height: 100%;
+	max-width: 780px;
+	margin: 0 auto;
+	border: 1px solid black;
 }
