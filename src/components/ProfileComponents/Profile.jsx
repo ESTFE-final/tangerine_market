@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { NavigationBar } from '../SharedComponents/CommonComponents';
 import Button from '../SharedComponents/Button';
 import profileImage from '../../icons/profile-img.svg';
+import messageIcon from '../../icons/message-btn.svg';
+import shareIcon from '../../icons/share-btn.svg';
 
 const dummyProfile = {
 	username: '애완 간식 수제샵',
@@ -43,11 +45,11 @@ const ProfileInfoText = styled.div`
 const ProfileName = styled.div`
 	.profile-username {
 		color: var(--white);
-		font-size: 1.6rem;
+		font-size: 2.5rem;
 	}
 
 	.profile-account {
-		font-size: 1.2rem;
+		font-size: 1.9rem;
 		color: var(--redlight);
 	}
 `;
@@ -55,24 +57,26 @@ const ProfileName = styled.div`
 const ProfileButtons = styled.div`
 	.message-btn,
 	.share-btn {
-		width: 34px;
-		height: 34px;
+		width: 60px;
+		height: 60px;
 		background-repeat: no-repeat;
 		background-position: center;
 	}
 
 	.message-btn {
-		background-image: url(../../icons/message-btn.svg);
+		background-image: url(${messageIcon});
+		background-size: 60px;
 		margin-right: 16px;
 	}
 
 	.share-btn {
-		background-image: url(../../icons/share-btn.svg);
+		background-image: url(${shareIcon});
+		background-size: 60px;
 	}
 `;
 
 const ProfileIntro = styled.p`
-	font-size: 1.4rem;
+	font-size: 2.3rem;
 	color: var(--white);
 `;
 
@@ -91,11 +95,12 @@ const ProfileFollow = styled.div`
 	align-items: center;
 
 	.stat-value {
+		font-size: 2.3rem;
 		font-weight: bold;
 	}
 
 	.stat-label {
-		font-size: 1rem;
+		font-size: 2rem;
 		color: var(--graydark-200);
 	}
 `;
