@@ -2,25 +2,25 @@ import styled, { css } from 'styled-components';
 
 const SIZES = {
 	xs: css`
-		--button-font-size: 1.1rem;
+		--button-font-size: 2.2rem;
 		--button-max-width: 140px;
-		--button-padding: 0.7rem 1.5rem 0.8rem;
-		--button-radius: 2.6rem;
+		--button-padding: 1.4rem 3rem 1.6rem;
+		--button-radius: 3.2rem;
 	`,
 	sm: css`
 		--button-max-width: 180px;
-		--button-padding: 0.9rem 3.1rem 0.7rem;
-		--button-radius: 3.2rem;
+		--button-padding: 1.8rem 6.2rem 1.4rem;
+		--button-radius: 6.4rem;
 	`,
 	md: css`
 		--button-max-width: 240px;
-		--button-padding: 1rem 4rem 0.8rem;
-		--button-radius: 3rem;
+		--button-padding: 2rem 8rem 1.6rem;
+		--button-radius: 6rem;
 	`,
 	lg: css`
 		--button-max-width: 644px;
-		--button-padding: 1.3rem 14rem 1.5rem;
-		--button-radius: 4.4rem;
+		--button-padding: 2.6rem 28rem 3rem;
+		--button-radius: 8.8rem;
 	`,
 };
 
@@ -31,10 +31,10 @@ const StyledButton = styled.button`
 	align-items: center;
 	justify-content: center;
 	border-color: var(--button-border-color, transparent);
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
 	border-radius: var(--button-radius);
-	font-size: var(--button-font-size, 1.4rem);
+	font-size: var(--button-font-size, 2.8rem);
 	background: var(--button-bg-color, #ff3239);
 	color: var(--button-color, #fff);
 	width: 100%;
