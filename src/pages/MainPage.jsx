@@ -8,7 +8,7 @@ import MainProductList from '../components/MainComponents/MainProductList';
 
 import { Link } from 'react-router-dom';
 import { BodyContainer } from '../components/SharedComponents/CommonComponents';
-import TapNavi from '../components/TabMenuComponents/TapNavi';
+import TabNavi from '../components/TabMenuComponents/TabNavi';
 
 const Tap__Navi = styled.div`
 	display: flex;
@@ -61,7 +61,7 @@ const MainPage = () => (
 		<MainBanner />
 		<MainCategory />
 		<MainProductList />
-		<TapNavi />
+		<TabNavi />
 	</>
 );
 

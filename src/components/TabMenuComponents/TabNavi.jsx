@@ -22,7 +22,7 @@ const TabNavi = styled.div`
 	border-top: 1px solid #e5e5e5;
 `;
 
-const TapNaviButton = styled.button`
+const TabNaviButton = styled.button`
 	display: inline-flex;
 	flex-direction: column;
 	justify-content: center;
@@ -44,7 +44,7 @@ const TapNaviButton = styled.button`
 	word-break: keep-all;
 `;
 
-const TapNaviIcon = styled.img`
+const TabNaviIcon = styled.img`
 	min-width: 48px;
 	width: 48px;
 	max-height: 48px;
@@ -63,18 +63,18 @@ const tabs = [
 	{ path: '/help', label: '프로필', icon: iconHelp },
 ];
 
-function TapNavi() {
+function TabNaviComponent() {
 	return (
 		<TabNavi>
 			{tabs.map((tab, index) => (
 				<Link key={index} to={tab.path}>
-					<TapNaviButton>
-						<TapNaviIcon src={tab.icon} alt={`${tab.label} icon`} /> {tab.label}
-					</TapNaviButton>
+					<TabNaviButton>
+						<TabNaviIcon src={tab.icon} alt={`${tab.label} icon`} /> {tab.label}
+					</TabNaviButton>
 				</Link>
 			))}
 		</TabNavi>
 	);
 }
 
-export default TapNavi;
+export default TabNaviComponent;

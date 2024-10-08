@@ -16,7 +16,7 @@ import FollowerListPage from './pages/FollowerListPage';
 import PostListPage from './pages/PostListPage';
 import SearchPage from './pages/SearchPage';
 
-import TapNavi from './components/TabMenuComponents/TapNavi';
+import TapNavi from './components/TabMenuComponents/TabNavi';
 
 const GlobalStyle = createGlobalStyle`
     ${reset}
