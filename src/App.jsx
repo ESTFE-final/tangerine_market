@@ -1,6 +1,9 @@
 import './App.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
+
 import MainPage from './pages/MainPage';
 import LoginEmailPage from './pages/LoginEmailPage';
 import SignUpPage from './pages/SignUpPage';
@@ -14,6 +17,29 @@ import PostListPage from './pages/PostListPage';
 import SearchPage from './pages/SearchPage';
 
 import TapNavi from './components/TabMenuComponents/TapNavi';
+
+const GlobalStyle = createGlobalStyle`
+    ${reset}
+    
+    span {
+    color: red;
+    font-size: 12px;
+    }
+
+    a{
+        text-decoration : none;
+        color : inherit;
+    }
+
+    button{
+        border : none;
+        cursor : pointer;
+    }
+
+    * {
+    box-sizing: border-box;
+    }
+`;
 
 function App() {
 	return (
@@ -31,8 +57,6 @@ function App() {
 				<Route path="/post" element={<PostListPage />} />
 				<Route path="/search" element={<SearchPage />} />
 			</Routes>
-
-			<TapNavi />
 		</BrowserRouter>
 	);
 }
