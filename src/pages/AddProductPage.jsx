@@ -5,9 +5,8 @@ import InputField from '../components/AddProductCoponents/InputTotal';
 
 const StyledDiv = styled.div`
 	display: flex;
+	position: relative;
 	flex-direction: column;
-	viewport-fit: 70%;
-	height: 100%;
 	justify-content: space-around;
 	align-items: center;
 	align-content: center;

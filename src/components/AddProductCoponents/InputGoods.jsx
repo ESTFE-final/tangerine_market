@@ -8,7 +8,7 @@ const InputField = styled.input`
 	border: none;
 	font-size: 1.5rem;
 	background-color: #22222222;
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 	width: 70%;
 	height: 50px;
 `;

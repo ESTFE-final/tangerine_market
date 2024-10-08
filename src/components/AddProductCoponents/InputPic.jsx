@@ -3,14 +3,16 @@ import styled from 'styled-components';
 
 const InputField = styled.input`
 	display: flex;
+	position: relative;
 	direction: column;
 
+	border: 1px solid #e5e5e5;
 	padding: 8px 16px;
 	border-radius: 30px;
 	border: none;
 
-	viewport-fit: 70%;
-	font-size: rem;
+	font-size: 1.5rem;
+	background-color: #22222222;
 	margin-bottom: 100px;
 	padding: 200px;
 	justify-content: center;
