@@ -1,17 +1,12 @@
 import React from 'react';
-import MainEmptyFeed from '../components/MainComponents/MainEmptyFeed';
-import { NavigationBar } from '../components/SharedComponents/CommonComponents';
-import { BodyContainer } from '../components/SharedComponents/CommonComponents';
-import MainFeed from '../components/MainComponents/MainFeed';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import axios from 'axios';
 
-const PostListPage = () => {
-	return (
-		<>
-			<NavigationBar title={'핸드펫 피드'} />
-			<MainFeed />
-			<MainEmptyFeed />
-		</>
-	);
-};
+const PostListPage = () => (
+	<div>
+		<h1>피드 디테일 페이지입니다</h1>
+	</div>
+);
 
 export default PostListPage;
