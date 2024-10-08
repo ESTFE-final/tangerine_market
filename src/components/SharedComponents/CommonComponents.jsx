@@ -1,29 +1,153 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './CommonComponents.css';
+import styled from 'styled-components';
+import LeftArrowIcon from '../../icons/icon-arrow-left.svg';
 
-// Navigation Bar 컴포넌트
+const NavBar = styled.nav`
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 90px;
+	padding: 0 16px;
+	display: flex;
+	align-items: center;
+	background-color: var(--white);
+	border-bottom: 1px solid var(--gray);
+	box-sizing: border-box;
+	margin-bottom: 48px;
+`;
+
+const NavLeftGroup = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+`;
+
+const NavLeftButton = styled.button`
+	background: url(${LeftArrowIcon}) no-repeat;
+	width: 22px;
+	height: 22px;
+`;
+
+const NavTitle = styled.h1`
+	margin-left: 10px;
+	font-weight: normal;
+	font-size: 3rem;
+	margin-top: 2px;
+`;
+
+const NavRightButton = styled.div`
+	margin-left: auto;
+`;
+
+const CommonInput = styled.input`
+	width: 100%;
+	padding: 1.063rem 1rem;
+	background-color: var(--graylight);
+	border: 1px solid var(--graylight-100);
+	border-radius: 44px;
+	outline: none;
+
+	&::placeholder {
+		color: var(--gray);
+	}
+
+	&:focus {
+		background-color: var(--white);
+		border-color: var(--primary);
+	}
+`;
+
+const AlertModalContainer = styled.dialog`
+	width: 252px;
+	border-radius: 10px;
+	border: none;
+	padding: 0;
+	margin: auto;
+`;
+
+const ModalWrap = styled.form`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	p {
+		padding: 24px 0;
+	}
+`;
+
+const AlertButtonLeft = styled.button`
+	width: 126px;
+	background-color: transparent;
+	padding: 15px 0;
+	border-top: 0.5px solid var(--gray);
+`;
+
+const AlertButtonRight = styled.button`
+	width: 126px;
+	background-color: transparent;
+	padding: 15px 0;
+	border-top: 0.5px solid var(--gray);
+	border-left: 0.5px solid var(--gray);
+	color: var(--primary);
+`;
+
+const PostModalContainer = styled.aside`
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: var(--white);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px 10px 0 0;
+	opacity: 0;
+	transform: translateY(100%);
+	transition:
+		opacity 0.3s,
+		transform 0.3s;
+
+	&.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+`;
+
+const PostModalContent = styled.div`
+	padding: 16px 0 24px 0;
+	display: flex;
+	flex-direction: column;
+`;
+
+const PostModalHandle = styled.button`
+	width: 50px;
+	height: 4px;
+	background-color: var(--gray);
+	border-radius: 5px;
+	margin: 0 auto 12px;
+`;
+
+const PostModalOption = styled.button`
+	width: 100%;
+	text-align: left;
+	padding: 15px 26px;
+`;
+
 export const NavigationBar = ({ title, rightButton }) => {
 	return (
-		<nav className="common-nav">
-			<div className="nav-left-group">
-				<button
-					type="button"
-					className="nav-left-button"
-					aria-label="뒤로가기"
-				></button>
-				<h1 className="nav-title">{title}</h1>
-			</div>
-			{rightButton && <div className="nav-right-button">{rightButton}</div>}
-		</nav>
+		<NavBar>
+			<NavLeftGroup>
+				<NavLeftButton type="button" aria-label="뒤로가기" />
+				<NavTitle>{title}</NavTitle>
+			</NavLeftGroup>
+			{rightButton && <NavRightButton>{rightButton}</NavRightButton>}
+		</NavBar>
 	);
 };
 
-// Input 컴포넌트
 export const Input = ({ type, placeholder, value, onChange }) => {
 	return (
-		<input
+		<CommonInput
 			type={type}
-			className="common-input"
 			placeholder={placeholder}
 			value={value}
 			onChange={onChange}
@@ -31,7 +155,6 @@ export const Input = ({ type, placeholder, value, onChange }) => {
 	);
 };
 
-// Alert Modal 컴포넌트
 export const AlertModal = ({
 	modalShow,
 	alertText,
@@ -49,27 +172,20 @@ export const AlertModal = ({
 	}, [modalShow]);
 
 	return (
-		<dialog ref={dialogRef} className="common-alert-modal">
-			<form method="dialog" className="modal-wrap">
+		<AlertModalContainer ref={dialogRef}>
+			<ModalWrap method="dialog">
 				<p>{alertText}</p>
-				<div className="alert-buttons">
-					<button
-						type="button"
-						className="alert-button-left"
-						onClick={modalClose}
-					>
+				<div>
+					<AlertButtonLeft type="button" onClick={modalClose}>
 						취소
-					</button>
-					<button type="button" className="alert-button-right">
-						{buttonText}
-					</button>
+					</AlertButtonLeft>
+					<AlertButtonRight type="button">{buttonText}</AlertButtonRight>
 				</div>
-			</form>
-		</dialog>
+			</ModalWrap>
+		</AlertModalContainer>
 	);
 };
 
-// Post Modal 컴포넌트
 export const PostModal = ({ isOpen, onClose, options = [] }) => {
 	const [isVisible, setIsVisible] = useState(isOpen);
 	const [isDragging, setIsDragging] = useState(false);
@@ -79,13 +195,11 @@ export const PostModal = ({ isOpen, onClose, options = [] }) => {
 		setIsVisible(isOpen);
 	}, [isOpen]);
 
-	// 모달 닫기
 	const handleClose = () => {
 		setIsVisible(false);
 		onClose();
 	};
 
-	// 옵션 선택 -> 모달에 있는 옵션을 클릭했을 때 함수를 실행하고 모달을 닫음
 	const handleOptionClick = (option) => {
 		if (option.onClick) {
 			option.onClick();
@@ -93,13 +207,11 @@ export const PostModal = ({ isOpen, onClose, options = [] }) => {
 		handleClose();
 	};
 
-	// 스와이프로 모달 닫기 -> 터치/마우스 시작 시 실행
 	const handleStart = (clientY) => {
 		setIsDragging(true);
 		setStartY(clientY);
 	};
 
-	// 스와이프로 모달 닫기 -> 터치/마우스 이동 시 실행
 	const handleMove = (clientY) => {
 		if (!isDragging) return;
 		const deltaY = clientY - startY;
@@ -109,24 +221,21 @@ export const PostModal = ({ isOpen, onClose, options = [] }) => {
 		}
 	};
 
-	// 드레그 또는 스와이프 동작 종료
 	const handleEnd = () => {
 		setIsDragging(false);
 	};
 
-	// 터치 이벤트 핸들러 -> 터치 스크린에서 처리 (모바일 등)
 	const handleTouchStart = (e) => handleStart(e.touches[0].clientY);
 	const handleTouchMove = (e) => handleMove(e.touches[0].clientY);
 	const handleTouchEnd = handleEnd;
 
-	// 마우스 이벤트 핸들러 -> 마우스를 사용하는 기기에서 처리 (데스크톱 등)
 	const handleMouseDown = (e) => handleStart(e.clientY);
 	const handleMouseMove = (e) => handleMove(e.clientY);
 	const handleMouseUp = handleEnd;
 
 	return (
-		<aside
-			className={`common-post-modal ${isVisible ? 'visible' : ''}`}
+		<PostModalContainer
+			className={isVisible ? 'visible' : ''}
 			onTouchStart={handleTouchStart}
 			onTouchMove={handleTouchMove}
 			onTouchEnd={handleTouchEnd}
@@ -135,27 +244,25 @@ export const PostModal = ({ isOpen, onClose, options = [] }) => {
 			onMouseUp={handleMouseUp}
 			onMouseLeave={handleMouseUp}
 		>
-			<div className="post-modal-content" role="dialog" aria-modal="true">
-				<button
+			<PostModalContent role="dialog" aria-modal="true">
+				<PostModalHandle
 					type="button"
-					className="post-modal-handle"
 					onClick={handleClose}
 					aria-label="닫기"
-				></button>
+				/>
 				<ul>
 					{options.map((option, index) => (
 						<li key={index}>
-							<button
+							<PostModalOption
 								type="button"
-								className="post-modal-option"
 								onClick={() => handleOptionClick(option)}
 							>
 								{option.text}
-							</button>
+							</PostModalOption>
 						</li>
 					))}
 				</ul>
-			</div>
-		</aside>
+			</PostModalContent>
+		</PostModalContainer>
 	);
 };
