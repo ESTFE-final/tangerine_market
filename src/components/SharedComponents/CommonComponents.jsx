@@ -144,16 +144,18 @@ export const NavigationBar = ({ title, rightButton }) => {
 	);
 };
 
-export const Input = ({ type, placeholder, value, onChange }) => {
+export const Input = styled(({ className, type, placeholder, value, onChange }) => {
 	return (
 		<CommonInput
+			className={className}
 			type={type}
 			placeholder={placeholder}
 			value={value}
 			onChange={onChange}
 		/>
 	);
-};
+}
+)``;
 
 export const AlertModal = ({
 	modalShow,
