@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+/**
+ * A styled input field component with custom styles.
+ *
+ * Styles:
+ * - Border: 1px
+ */
 const InputField = styled.input`
 	border: 1px solid #e5e5e5;
 	padding: 8px 16px;
@@ -9,20 +15,30 @@ const InputField = styled.input`
 	font-size: 1.5rem;
 	background-color: #22222222;
 	margin-bottom: 50px;
-	width: 70%;
-	height: 50px;
+	width: 644px;
+	height: 72px;
 `;
 
 const InputContainer = styled.div`
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
+	align-items: flex-start;
+`;
+
+const Label = styled.label`
+	font-size: 30px;
+	margin-bottom: 8px;
 `;
 
 const Input = () => {
 	return (
 		<InputContainer>
-			<InputField type="text" placeholder="검색어를 입력하세요" />
+			<Label>상품명</Label>
+			<InputField
+				type="text"
+				placeholder="검색어를 입력하세요"
+				style={{ fontSize: '30px' }}
+			/>
 		</InputContainer>
 	);
 };

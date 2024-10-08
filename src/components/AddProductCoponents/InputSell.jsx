@@ -8,21 +8,31 @@ const InputField = styled.input`
 	border: none;
 	font-size: 1.5rem;
 	background-color: #22222222;
-	margin-bottom: 100px;
-	width: 70%;
-	height: 50px;
+	margin-bottom: 50px;
+	width: 644px;
+	height: 72px;
 `;
 
 const InputContainer = styled.div`
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
+	align-items: flex-start;
+`;
+
+const Label = styled.label`
+	font-size: 30px;
+	margin-bottom: 8px;
 `;
 
 const InputSell = () => {
 	return (
 		<InputContainer>
-			<InputField type="text" placeholder="검색어를 입력하세요" />
+			<Label>판매 링크</Label>
+			<InputField
+				type="text"
+				placeholder="검색어를 입력하세요3"
+				style={{ fontSize: '30px' }}
+			/>
 		</InputContainer>
 	);
 };

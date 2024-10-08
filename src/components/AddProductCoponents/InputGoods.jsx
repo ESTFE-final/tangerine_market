@@ -9,20 +9,30 @@ const InputField = styled.input`
 	font-size: 1.5rem;
 	background-color: #22222222;
 	margin-bottom: 50px;
-	width: 70%;
-	height: 50px;
+	width: 644px;
+	height: 72px;
 `;
 
 const InputContainer = styled.div`
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
+	align-items: flex-start;
+`;
+
+const Label = styled.label`
+	font-size: 30px;
+	margin-bottom: 8px;
 `;
 
 const InputGoods = () => {
 	return (
 		<InputContainer>
-			<InputField type="text" placeholder="검색어를 입력하세요" />
+			<Label>가격</Label>
+			<InputField
+				type="text"
+				placeholder="검색어를 입력하세요2"
+				style={{ fontSize: '30px' }}
+			/>
 		</InputContainer>
 	);
 };

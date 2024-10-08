@@ -4,11 +4,17 @@ import styled from 'styled-components';
 const InputField = styled.input`
 	display: flex;
 	position: relative;
-	direction: column;
+
+	width: 644px;
+	height: 408px;
+	top: 64px;
+	gap: 0px;
+	border-radius: 30px;
+	border: 1px 0px 0px 0px;
+	opacity: 0px;
 
 	border: 1px solid #e5e5e5;
 	padding: 8px 16px;
-	border-radius: 30px;
 	border: none;
 
 	font-size: 1.5rem;
@@ -24,7 +30,7 @@ const InputField = styled.input`
 const InputPic = () => {
 	return (
 		<div>
-			<InputField type="text" placeholder="검색어를 입력하세요" />
+			<InputField type="text" placeholder="" style={{ fontSize: '30px' }} />
 		</div>
 	);
 };
