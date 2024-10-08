@@ -6,6 +6,7 @@ import MainCategory from '../components/MainComponents/MainCategory';
 import MainProductList from '../components/MainComponents/MainProductList';
 import { Link } from 'react-router-dom';
 import { BodyContainer } from '../components/SharedComponents/CommonComponents';
+import TapNavi from '../components/TabMenuComponents/TapNavi';
 
 const MainPage = () => (
 	<>
@@ -13,6 +14,7 @@ const MainPage = () => (
 		<MainBanner />
 		<MainCategory />
 		<MainProductList />
+		<TapNavi />
 	</>
 );
 
