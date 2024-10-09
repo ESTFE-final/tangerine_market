@@ -27,9 +27,21 @@ const InputField = styled.input`
 	justify-items: center;
 `;
 
+const InputContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+`;
+
+const Label = styled.label`
+	font-size: 30px;
+	margin-bottom: 8px;
+`;
+
 const InputPic = () => {
 	return (
 		<div>
+			<Label>이미지 등록</Label>
 			<InputField type="text" placeholder="" style={{ fontSize: '30px' }} />
 		</div>
 	);
