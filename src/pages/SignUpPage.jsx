@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // component 폴더에 있는 스타일 컴포넌트를 불러오기
 import { Page, TitleWrap, ContentWrap, InputWrap, Input, ErrorMessageWrap, BottomButton } from '../components/LoginComponents/loginindex';
+import { Link } from 'react-router-dom'; // Link import for navigation
 
 const SignupPage = () => {
 	const [email, setEmail] = useState(''); 
@@ -100,6 +101,25 @@ const SignupPage = () => {
 				<BottomButton onClick={handleSubmit} disabled={isButtonDisabled}>
 					다음
 				</BottomButton>
+				{/* 기능 구현까지 잠깐 프로필 등록 포탈 */}
+				<Link to="/newprofile" style={{
+          width: '210px',
+          height: '28px',
+          position: 'absolute',
+          top: '500px',
+          left: '50%',
+          transform: 'translateX(-50%)', // 중앙 정렬
+          textAlign: 'center',
+          color: 'gray', // 링크 색상
+          textDecoration: 'none', // 링크 밑줄 제거
+          marginTop: '40px' // 버튼과의 간격
+        }}>
+          프로필 등록 포탈
+        </Link>
+
+
+
+
 			</ContentWrap>
 		</Page>
 	);
