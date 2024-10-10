@@ -27,15 +27,11 @@ const InputField = styled.input`
 	justify-items: center;
 `;
 
-const InputContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-`;
-
 const Label = styled.label`
+	display: flex;
 	font-size: 30px;
-	margin-bottom: 8px;
+	margin-bottom: 0px;
+	transform: translate(0px, 50px);
 `;
 
 const InputPic = () => {

@@ -1,8 +1,6 @@
+import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-
-import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import MainPage from './pages/MainPage';
 import LoginEmailPage from './pages/LoginEmailPage';
@@ -15,31 +13,6 @@ import UserProfilePage from './pages/UserProfilePage';
 import FollowerListPage from './pages/FollowerListPage';
 import PostListPage from './pages/PostListPage';
 import SearchPage from './pages/SearchPage';
-
-import TapNavi from './components/TabMenuComponents/TabNavi';
-
-const GlobalStyle = createGlobalStyle`
-    ${reset}
-    
-    span {
-    color: red;
-    font-size: 12px;
-    }
-
-    a{
-        text-decoration : none;
-        color : inherit;
-    }
-
-    button{
-        border : none;
-        cursor : pointer;
-    }
-
-    * {
-    box-sizing: border-box;
-    }
-`;
 
 function App() {
 	return (

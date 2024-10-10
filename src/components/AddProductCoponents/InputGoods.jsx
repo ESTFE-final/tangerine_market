@@ -1,25 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// InputField Styles
 const InputField = styled.input`
-	border: 1px solid #e5e5e5;
-	padding: 8px 16px;
-	border-radius: 30px;
+	/* Border Styles */
 	border: none;
-	font-size: 1.5rem;
-	background-color: #22222222;
-	margin-bottom: 50px;
+	border-radius: 30px;
+	border: 1px solid #e5e5e5;
+
+	/* Size & Spacing */
 	width: 644px;
 	height: 72px;
+	padding: 8px 16px;
+	margin-bottom: 50px;
+
+	/* Background & Font */
+	background-color: #22222222;
+	font-size: 1.5rem;
 `;
 
+// InputContainer Styles
 const InputContainer = styled.div`
+	/* Flexbox Styles */
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 `;
 
+// Label Styles
 const Label = styled.label`
+	/* Font Styles */
 	font-size: 30px;
 	margin-bottom: 8px;
 `;

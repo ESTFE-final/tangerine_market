@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// Input Styles
 const InputField = styled.input`
 	border: 1px solid #e5e5e5;
 	padding: 8px 16px;
@@ -13,12 +14,14 @@ const InputField = styled.input`
 	height: 72px;
 `;
 
+// Container Styles
 const InputContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 `;
 
+// Label Styles
 const Label = styled.label`
 	font-size: 30px;
 	margin-bottom: 8px;

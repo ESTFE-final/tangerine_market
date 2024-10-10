@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 
 import { NavigationBar } from '../components/SharedComponents/CommonComponents';
@@ -12,16 +13,6 @@ const StyledDiv = styled.div`
 	align-items: center;
 	align-content: center;
 	justify-items: center;
-`;
-
-const HeaderContainer = styled.div`
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	width: 100%;
-	padding: 0 20px;
-	width: 644px;
-	height: 72px;
 `;
 
 const AddProduct = () => (

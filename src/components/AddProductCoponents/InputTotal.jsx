@@ -1,13 +1,14 @@
+import React from 'react';
 import styled from 'styled-components';
-
 import InputPic from './InputPic';
 import FloatinButton from './FloatinButton';
 import Input from './GoodsName';
 import InputGoods from './InputGoods';
 import InputSell from './InputSell';
 
-const InputContainer = styled.div`
+const InputDiv = styled.div`
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
@@ -21,13 +22,13 @@ const InputContainer = styled.div`
 const InputField = () => {
 	return (
 		<>
-			<div>
+			<InputDiv>
 				<InputPic />
 				<FloatinButton />
 				<Input />
 				<InputGoods />
 				<InputSell />
-			</div>
+			</InputDiv>
 		</>
 	);
 };

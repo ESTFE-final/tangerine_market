@@ -8,15 +8,23 @@ import styled from 'styled-components';
  * - Border: 1px
  */
 const InputField = styled.input`
-	border: 1px solid #e5e5e5;
-	padding: 8px 16px;
-	border-radius: 30px;
+	/* Border styles */
 	border: none;
-	font-size: 1.5rem;
-	background-color: #22222222;
-	margin-bottom: 50px;
+	border-radius: 30px;
+
+	/* Size */
 	width: 644px;
 	height: 72px;
+
+	/* Font */
+	font-size: 1.5rem;
+
+	/* Background */
+	background-color: #22222222;
+
+	/* Spacing */
+	padding: 8px 16px;
+	margin-bottom: 50px;
 `;
 
 const InputContainer = styled.div`

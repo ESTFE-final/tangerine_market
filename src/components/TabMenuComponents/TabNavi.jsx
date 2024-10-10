@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -8,6 +9,7 @@ import iconServices from '../../icons/icon_edit 2.svg';
 import iconContact from '../../icons/icon-edit.svg';
 import iconHelp from '../../icons/icon-user.svg';
 
+// Container 스타일
 const TabNavi = styled.div`
 	display: flex;
 	position: fixed;
@@ -22,6 +24,7 @@ const TabNavi = styled.div`
 	border-top: 1px solid #e5e5e5;
 `;
 
+// Button 스타일
 const TabNaviButton = styled.button`
 	display: inline-flex;
 	flex-direction: column;
@@ -44,6 +47,7 @@ const TabNaviButton = styled.button`
 	word-break: keep-all;
 `;
 
+// Icon 스타일
 const TabNaviIcon = styled.img`
 	min-width: 48px;
 	width: 48px;

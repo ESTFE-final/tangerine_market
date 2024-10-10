@@ -18,19 +18,12 @@ const StyledButton = styled.button`
 	transform: translate(245px, -122px);
 `;
 
-const InputContainer = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-`;
-
 const SaveButton = () => {
 	return (
 		<div>
 			<StyledButton>
 				<button>
-					<div style={{ fontSize: '22px' }}>저장하기</div>
+					<div style={{ fontSize: '22px', color: 'white' }}>저장하기</div>
 				</button>
 			</StyledButton>
 		</div>
