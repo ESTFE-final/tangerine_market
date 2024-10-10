@@ -132,10 +132,6 @@ const PostModalOption = styled.button`
 	text-align: left;
 	padding: 30px 52px;
 `;
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
 export const NavigationBar = ({ title, rightButton, className }) => {
 	return (
 		<NavBar className={className}>
@@ -148,22 +144,18 @@ export const NavigationBar = ({ title, rightButton, className }) => {
 	);
 };
 
-<<<<<<< Updated upstream
-export const Input = styled(({ className, type, placeholder, value, onChange }) => {
-=======
-export const Input = ({ type, placeholder, value, onChange, className }) => {
->>>>>>> Stashed changes
-	return (
-		<CommonInput
-			className={className}
-			type={type}
-			placeholder={placeholder}
-			value={value}
-			onChange={onChange}
-			className={className}
-		/>
-	);
-}
+export const Input = styled(
+	({ className, type, placeholder, value, onChange }) => {
+		return (
+			<CommonInput
+				className={className}
+				type={type}
+				placeholder={placeholder}
+				value={value}
+				onChange={onChange}
+			/>
+		);
+	}
 )``;
 
 export const AlertModal = ({
