@@ -1,13 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import axios from 'axios';
 
-const AddProductPage = () => (
-	<div>
-		<h1>판매 상품 등록 페이지입니다</h1>
-		<Link to="/myprofile">저장 버튼 누르면 내 프로필 페이지로 이동</Link>
-	</div>
+import { NavigationBar } from '../components/SharedComponents/CommonComponents';
+import InputField from '../components/AddProductCoponents/InputTotal';
+import SaveButton from '../components/AddProductCoponents/SaveButton';
+
+const StyledDiv = styled.div`
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+	margin-bottom: 0px;
+`;
+
+const AddProduct = () => (
+	<>
+		<StyledDiv>
+			<NavigationBar title={'상품 등록'} />
+			<SaveButton />
+			<InputField />
+		</StyledDiv>
+	</>
 );
 
-export default AddProductPage;
+export default AddProduct;

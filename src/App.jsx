@@ -1,12 +1,7 @@
+import React from 'react';
 import './App.css';
-import {
-	BrowserRouter,
-	Routes,
-	Route,
-	Link,
-	Navigate,
-	useLocation,
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import MainPage from './pages/MainPage';
 import LoginEmailPage from './pages/LoginEmailPage';
 import SignUpPage from './pages/SignUpPage';
