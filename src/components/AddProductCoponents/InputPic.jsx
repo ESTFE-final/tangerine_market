@@ -19,7 +19,7 @@ const InputField = styled.input`
 
 	font-size: 1.5rem;
 	background-color: #22222222;
-	margin-bottom: 50px;
+	margin-bottom: -70px;
 	padding: 200px;
 	justify-content: center;
 	align-items: center;
@@ -28,10 +28,11 @@ const InputField = styled.input`
 `;
 
 const Label = styled.label`
+	justify-content: bottom;
 	display: flex;
 	font-size: 30px;
 	margin-bottom: 0px;
-	transform: translate(0px, 50px);
+	transform: translate(0px, 45px);
 `;
 
 const InputPic = () => {

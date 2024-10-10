@@ -13,16 +13,17 @@ const StyledDiv = styled.div`
 	align-items: center;
 	align-content: center;
 	justify-items: center;
+	margin-bottom: 0px;
 `;
 
 const AddProduct = () => (
-	<div>
+	<>
 		<StyledDiv>
 			<NavigationBar title={'상품 등록'} />
 			<SaveButton />
 			<InputField />
 		</StyledDiv>
-	</div>
+	</>
 );
 
 export default AddProduct;

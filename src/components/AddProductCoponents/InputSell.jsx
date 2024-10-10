@@ -9,7 +9,7 @@ const InputField = styled.input`
 	border: none;
 	font-size: 1.5rem;
 	background-color: #22222222;
-	margin-bottom: 50px;
+	margin-bottom: 500px;
 	width: 644px;
 	height: 72px;
 `;

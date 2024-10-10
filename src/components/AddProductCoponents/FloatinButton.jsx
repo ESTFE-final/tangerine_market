@@ -18,7 +18,7 @@ const StyledButton = styled.button`
 
 	z-index: 200;
 
-	transform: translate(255px, -155px);
+	transform: translate(255px, -35px);
 `;
 
 const FloatinButton = () => {
