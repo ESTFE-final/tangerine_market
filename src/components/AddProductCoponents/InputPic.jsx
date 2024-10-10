@@ -30,7 +30,7 @@ const InputField = styled.input`
 const Label = styled.label`
 	justify-content: bottom;
 	display: flex;
-	font-size: 30px;
+	font-size: 3rem;
 	margin-bottom: 0px;
 	transform: translate(0px, 45px);
 `;
@@ -39,7 +39,7 @@ const InputPic = () => {
 	return (
 		<div>
 			<Label>이미지 등록</Label>
-			<InputField type="text" placeholder="" style={{ fontSize: '30px' }} />
+			<InputField type="text" placeholder="" style={{ fontSize: '3rem' }} />
 		</div>
 	);
 };

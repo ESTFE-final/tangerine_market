@@ -34,7 +34,7 @@ const InputContainer = styled.div`
 `;
 
 const Label = styled.label`
-	font-size: 30px;
+	font-size: 3rem;
 	margin-bottom: 8px;
 `;
 
@@ -45,7 +45,7 @@ const Input = () => {
 			<InputField
 				type="text"
 				placeholder="검색어를 입력하세요"
-				style={{ fontSize: '30px' }}
+				style={{ fontSize: '3rem' }}
 			/>
 		</InputContainer>
 	);
